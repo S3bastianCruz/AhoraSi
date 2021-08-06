@@ -14,8 +14,9 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
   with:
     entrypoint: /entrypoint.sh
+  args:
+    - ${{ inputs.who-to-greet }}
+
     
